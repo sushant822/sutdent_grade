@@ -1,5 +1,5 @@
 ## Student Grade Prediction
-#### by Sushant Deshpande
+##### by Sushant Deshpande
 
 Machine Learning model to predict student grades.
 
