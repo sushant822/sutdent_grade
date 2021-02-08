@@ -4,8 +4,8 @@
 Machine Learning model to predict student's grades.
 
 Libraries used:
-    Pandas
-    Numpy
-    Sklearn
+    <li>Pandas
+    <li>Numpy
+    <li>Sklearn
 
 Work in progress...
