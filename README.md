@@ -21,7 +21,7 @@ Our data looks like this:
 
 ![01_table](images/01_table.png)
 
-A look at datatypes reveals that we have objects and int64:
+A look at datatypes reveals that we have `objects` and `int64`:
 
     grades.dtypes
 
