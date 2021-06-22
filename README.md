@@ -9,3 +9,5 @@ Libraries used:
     <li>Sklearn</li>
 
 The aim of this project is to build a model that would predict the grade a student might get based on certain features.
+
+We begin with importing the csv file into our jupyter notebook.
