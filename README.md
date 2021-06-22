@@ -23,6 +23,6 @@ Our data looks like this:
 
 A look at datatypes reveals that we have `objects` and `int64`:
 
-    > grades.dtypes
+> grades.dtypes
 
 ![02_table](images/02_table.png)
