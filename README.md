@@ -8,4 +8,4 @@ Libraries used:
     <li>Numpy</li>
     <li>Sklearn</li>
 
-Work in progress...
+The aim of this project is to build a model that would predict the grade a student might get based on certain features.
