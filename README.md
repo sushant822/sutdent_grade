@@ -21,10 +21,10 @@ Our data looks like this:
 
 ![01_table](images/01_table.png)
 
-A look at datatypes reveals that we have `objects` and `int64`:
+A look at datatypes reveals that we have `object` and `int64`:
 
 > grades.dtypes
 
 ![02_table](images/02_table.png)
 
-Let's create 2 new dataframes, one containing 
+Let's create 2 new dataframes, one containing all the 
