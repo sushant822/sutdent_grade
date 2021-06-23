@@ -26,3 +26,5 @@ A look at datatypes reveals that we have `objects` and `int64`:
 > grades.dtypes
 
 ![02_table](images/02_table.png)
+
+Let's create 2 new dataframes, one containing 
