@@ -28,3 +28,6 @@ A look at datatypes reveals that we have `object` and `int64`:
 ![02_table](images/02_table.png)
 
 Let's create 2 new dataframes, one containing all the `object` columns and other containing all the `int64` columns.
+
+    grades_df_obj = grades.select_dtypes(exclude=['int64'])
+    
