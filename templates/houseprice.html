@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style>
+.container_but {
+  height: 70px;
+  position: relative;
+  border: 0px solid green;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+</style>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1 class="text-center"><strong>House Price Finder</strong></h1>
+
+</div>
+  <div class="container-fluid">
+    <form name="passdata" action="/houseprice" method="POST">
+    <div class="container px-lg-5">
+      <div class="row mx-lg-n5">
+        <div class="col py-3 px-lg-5 border bg-light"><div class="form-group">
+          <label for="FormControlFile1"><strong>Postal Code</strong></label>
+          <input class="form-control" type="text" placeholder="Postal Code" name="postal_code">
+        </div></div>
+        <div class="col py-3 px-lg-5 border bg-light"><div class="form-group">
+          <label for="FormControlFile1"><strong>Bedrooms</strong></label>
+          <input class="form-control" type="text" placeholder="Bedrooms" name="bed">
+      </div></div>
+        <div class="col py-3 px-lg-5 border bg-light"><div class="form-group">
+          <label for="FormControlFile2"><strong>Full Bathrooms</strong></label>
+          <input class="form-control" type="text" placeholder="Full Bathrooms" name="full_bath">
+      </div></div>
+        <div class="col py-3 px-lg-5 border bg-light"><div class="form-group">
+          <label for="FormControlFile1"><strong>Half Bathrooms</strong></label>
+          <input class="form-control" type="text" placeholder="Half Bathrooms" name="half_bath">
+      </div></div>
+      </div>
+    </div>
+    <div class="container px-lg-5">
+      <div class="row mx-lg-n5">
+        <div class="col py-3 px-lg-5 border bg-light"><div class="form-group">
+          <label for="FormControlFile1"><strong>Property Area</strong></label>
+          <input class="form-control" type="text" placeholder="Property Area" name="property_area">
+      </div></div>
+        <div class="col py-3 px-lg-5 border bg-light"><div class="form-group">
+          <label for="FormControlFile1"><strong>Lot Size</strong></label>
+          <input class="form-control" type="text" placeholder="Lot Size" name="lot_size">
+      </div></div>
+        <div class="col py-3 px-lg-5 border bg-light"><div class="form-group">
+          <label for="FormControlFile1"><strong>Year Built</strong></label>
+          <input class="form-control" type="text" placeholder="Year Built" name="year_built">
+      </div></div>
+      </div>
+    </div>
+    
+        
+    <div class="container px-lg-5">
+      <div class="row mx-lg-n5">
+        <div class="col py-3 px-lg-5 border bg-light"><div class="form-group">
+          <label><strong>Basement</strong></label><br>
+      <div class="form-check">
+          <input class="form-check-input" type="radio" name="option_basement" id="exampleRadios1" value="yes" checked>
+          <label class="form-check-label" for="exampleRadios1">
+            Yes
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="option_basement" id="exampleRadios2" value="no">
+          <label class="form-check-label" for="exampleRadios2">
+            No
+          </label>
+        </div>
+      </div></div>
+        <div class="col py-3 px-lg-5 border bg-light"><div class="form-group">
+          <label><strong>Garage</strong></label><br>
+      <div class="form-check">
+          <input class="form-check-input" type="radio" name="option_garage" id="garage_yes" value="yes" checked>
+          <label class="form-check-label" for="garage_yes">
+            Yes
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="option_garage" id="garage_no" value="no">
+          <label class="form-check-label" for="garage_no">
+            No
+          </label>
+        </div>
+      </div></div>
+        <div class="col py-3 px-lg-5 border bg-light"><div class="form-group">
+          <label><strong>Property Type</strong></label><br>
+      <div class="form-check">
+          
+          <input class="form-check-input" type="radio" name="option_ptype" id="house" value="house" checked>
+          <label class="form-check-label" for="house">
+            House
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="option_ptype" id="condo" value="condo">
+          <label class="form-check-label" for="condo">
+            Condo
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="option_ptype" id="townhouse" value="townhouse">
+          <label class="form-check-label" for="towbhouse">
+            Townhouse
+          </label>
+        </div>
+      </div></div>
+      </div>
+    </div>
+        
+        
+        
+        <!--<div class="form-group">
+            <label for="FormControlFile1"><strong>Distance Downtown</strong></label>
+            <input class="form-control" type="text" placeholder="Distacne Downtown" name="distance_downtown">
+        </div>-->
+        
+
+        
+
+        
+        
+        
+
+        
+
+        <!--<div class="form-group">
+            <label for="FormControlFile1"><strong>Garage</strong></label>
+            <input class="form-control" type="text" placeholder="Garage" name="garage">
+        </div>
+        <div class="form-group">
+            <label for="FormControlFile1"><strong>Walk Score</strong></label>
+            <input class="form-control" type="text" placeholder="Walk Score" name="walk_score">
+        </div>
+        <div class="form-group">
+            <label for="FormControlFile1"><strong>Bike Score</strong></label>
+            <input class="form-control" type="text" placeholder="Bike Score" name="bike_score">
+        </div>
+        <div class="form-group">
+            <label for="FormControlFile1"><strong>Transit Score</strong></label>
+            <input class="form-control" type="text" placeholder="Transit Score" name="transit_score">
+        </div>-->
+
+        
+
+        <!--<div class="form-group">
+            <label for="FormControlFile1"><strong>House</strong></label>
+            <input class="form-control" type="text" placeholder="House" name="house">
+        </div>
+        <div class="form-group">
+            <label for="FormControlFile1"><strong>Condo</strong></label>
+            <input class="form-control" type="text" placeholder="Condo" name="condo">
+        </div>
+        <div class="form-group">
+            <label for="FormControlFile1"><strong>Townhouse</strong></label>
+            <input class="form-control" type="text" placeholder="Townhouse" name="townhouse">
+        </div>-->
+        <!--<input type="submit" value="submit">-->
+		<div class="container_but">
+        <div class="center">
+        <div class="container px-lg-5">
+            <div class="row mx-lg-n5">
+              <div class="col py-3 px-lg-5 border bg-light"><button type="submit" class="btn btn-primary">Submit</button></div>
+            </div>
+          </div>
+		</div>
+        </div>
+    </form>
+	  <br>
+    <!--<form name="passdata1" action="." method="post">
+    <div class="form-group">
+        <label for="FormControlFile1"><strong>Postal Code</strong></label>
+        <input class="form-control" type="text" placeholder="Postal Code" name="postal_code">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>-->
+    <div class="container px-lg-5">
+        <div class="row mx-lg-n5">
+          <div class="col py-3 px-lg-5 border bg-light"><div class="card">
+            <div class="card-body">
+              <h3>Price: {% for item in Ypredict %}</h3>
+                  <p><strong>$ {{item[0]}}</strong></p>
+                  {% endfor %}
+            </div>
+          </div></div>
+        </div>
+      </div>
+	  </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+<!-- end document-->
