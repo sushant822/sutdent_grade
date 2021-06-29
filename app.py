@@ -144,7 +144,7 @@ def getvalues():
     years_old = 2021 - year_built
 
     ###### ML Model ######
-    filename = 'data/LogisticRegression.sav'
+    filename = 'LogisticRegression.sav'
 
     joblib_LR_model = joblib.load(filename)
 
