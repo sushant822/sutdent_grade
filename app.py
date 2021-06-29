@@ -1,6 +1,6 @@
 from flask import Flask, render_template, jsonify, url_for
 #from flask_sqlalchemy import SQLAlchemy
-#import psycopg2
+import psycopg2
 from flask import request
 import joblib
 import pgeocode
@@ -15,7 +15,7 @@ import re
 
 app = Flask(__name__)
 
-db = SQLAlchemy()
+#db = SQLAlchemy()
 
 @app.route("/")
 def home():
