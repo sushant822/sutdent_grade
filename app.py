@@ -1,6 +1,6 @@
 from flask import Flask, render_template, jsonify, url_for
 #from flask_sqlalchemy import SQLAlchemy
-#import psycopg2
+import psycopg2
 from flask import request
 import joblib
 import pgeocode
@@ -14,6 +14,13 @@ import re
 #from tensorflow import keras
 
 app = Flask(__name__)
+
+#db = SQLAlchemy()
+
+@app.route("/")
+def home():
+    
+    return render_template("index.html")
 
 @app.route("/houseprice")
 def house_price():
@@ -144,7 +151,7 @@ def getvalues():
     years_old = 2021 - year_built
 
     ###### ML Model ######
-    filename = 'LogisticRegression.sav'
+    filename = 'data/LogisticRegression.sav'
 
     joblib_LR_model = joblib.load(filename)
 
