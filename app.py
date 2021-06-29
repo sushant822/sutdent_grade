@@ -1,6 +1,6 @@
 from flask import Flask, render_template, jsonify, url_for
-from flask_sqlalchemy import SQLAlchemy
-import psycopg2
+#from flask_sqlalchemy import SQLAlchemy
+#import psycopg2
 from flask import request
 import joblib
 import pgeocode
