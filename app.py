@@ -22,12 +22,7 @@ def home():
     
     return render_template("index.html")
 
-@app.route("/houseprice")
-def house_price():
-    
-    return render_template("houseprice.html")
-
-@app.route("/houseprice",methods=['POST'])
+@app.route("/index",methods=['POST'])
 def getvalues():
     bed = request.form['bed']
     full_bath = request.form['full_bath']
@@ -151,7 +146,7 @@ def getvalues():
     years_old = 2021 - year_built
 
     ###### ML Model ######
-    filename = 'data/LogisticRegression.sav'
+    filename = 'LogisticRegression.sav'
 
     joblib_LR_model = joblib.load(filename)
 
@@ -160,7 +155,7 @@ def getvalues():
     Ypredict_full = joblib_LR_model.predict(test_data)
     Ypredict = np.round_(Ypredict_full, 2)
 
-    return render_template("houseprice.html", Ypredict=[Ypredict])
+    return render_template("index.html", Ypredict=[Ypredict])
     ####### END #######
 
 if __name__ == "__main__":
