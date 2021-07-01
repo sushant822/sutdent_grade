@@ -33,7 +33,7 @@ def getvalues():
     option_basement = request.form['option_basement']
     option_garage = request.form['option_garage']
     property_type = request.form['option_ptype']
-    postal_code = request.form['postal_code']
+    postal_code = request.form['studytime']
 
     ###### Property Type ######
     if property_type == 'house':
