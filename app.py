@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, url_for
+from flask import Flask, render_template
 from flask import request
 import joblib
 import pandas as pd
