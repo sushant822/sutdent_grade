@@ -27,9 +27,9 @@ def getvalues():
     studytime = int(studytime)
     failures = int(failures)
     freetime = int(freetime)
-    absences = float(absences)
+    absences = int(absences)
     health = int(health)
-    grade_1 = float(grade_1)
+    grade_1 = int(grade_1)
     grade_2 = int(grade_2)
 
     ###### ML Model ######
