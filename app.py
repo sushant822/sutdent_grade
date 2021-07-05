@@ -23,13 +23,6 @@ def home():
     
     return render_template("index.html")
 
-
-
-@app.route("/houseprice")
-def house_price():
-    
-    return render_template("houseprice.html")
-
 @app.route("/houseprice",methods=['POST'])
 def getvalues():
     studytime = request.form['studytime']
