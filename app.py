@@ -59,7 +59,7 @@ def getvalues():
     Ypredict_full = joblib_LR_model.predict(test_data)
     Ypredict = np.round_(Ypredict_full, 2)
 
-    return redirect("houseprice.html", Ypredict=[Ypredict])
+    return render_template("houseprice.html", Ypredict=[Ypredict])
     ####### END #######
 
 if __name__ == "__main__":
