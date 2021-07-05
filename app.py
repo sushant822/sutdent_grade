@@ -13,7 +13,7 @@ def home():
     
     return render_template("index.html")
 
-@app.route("/index",methods=['POST'])
+@app.route("/",methods=['POST'])
 def getvalues():
     studytime = request.form['studytime']
     failures = request.form['failures']
