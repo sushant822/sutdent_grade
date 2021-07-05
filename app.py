@@ -8,9 +8,12 @@ app = Flask(__name__)
 
 #db = SQLAlchemy()
 
+@app.route("/")
+def home():
+    
+    return render_template("index.html")
 
-
-@app.route("/",methods=['POST'])
+@app.route("/index",methods=['POST'])
 def getvalues():
     studytime = request.form['studytime']
     failures = request.form['failures']
