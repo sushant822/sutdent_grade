@@ -1,12 +1,8 @@
 from flask import Flask, render_template, jsonify, url_for
-#from flask_sqlalchemy import SQLAlchemy
-#import psycopg2
 from flask import request
 import joblib
 import pandas as pd
 import numpy as np
-from math import sin, cos, sqrt, atan2, radians
-#from tensorflow import keras
 
 app = Flask(__name__)
 
