@@ -50,7 +50,7 @@ def getvalues():
     grade_2 = int(grade_2)
 
     ###### ML Model ######
-    filename = 'StudentGrade.sav'
+    filename = 'LogisticRegression.sav'
 
     joblib_LR_model = joblib.load(filename)
 
