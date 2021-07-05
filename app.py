@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, url_for
+from flask import Flask, render_template, request, redirect
 #from flask_sqlalchemy import SQLAlchemy
 #import psycopg2
 from flask import request
@@ -59,7 +59,7 @@ def getvalues():
     Ypredict_full = joblib_LR_model.predict(test_data)
     Ypredict = np.round_(Ypredict_full, 2)
 
-    return render_template("houseprice.html", Ypredict=[Ypredict])
+    return redirect("houseprice.html", Ypredict=[Ypredict])
     ####### END #######
 
 if __name__ == "__main__":
