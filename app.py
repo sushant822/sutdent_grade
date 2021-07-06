@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, redirect
 #import psycopg2
 from flask import request
 import joblib
-import pgeocode
+#import pgeocode
 import pandas as pd
 import numpy as np
 import requests
