@@ -52,7 +52,7 @@ def getvalues():
 
     ###### ML Model ######
     __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
-    filename = open(os.path.join(__location__, 'LogisticRegression.sav'))
+    filename = open(os.path.join(__location__, 'StudentGrade.sav'))
     #filename = 'StudentGrade.sav'
 
     joblib_LR_model = joblib.load(filename)
