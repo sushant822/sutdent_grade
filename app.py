@@ -52,10 +52,11 @@ def getvalues():
 
     ###### ML Model ######
 
-    cwd = os.getcwd()  # Get the current working directory (cwd)
-    #files = os.listdir(cwd)  # Get all the files in that directory
+    __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
 
-    filename = 'cwd/StudentGrade.sav'
+    filename = open(os.path.join(__location__, 'StudentGrade.sav'))
+
+    #filename = 'StudentGrade.sav'
 
     joblib_LR_model = joblib.load(filename)
 
