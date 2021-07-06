@@ -58,7 +58,7 @@ def getvalues():
 
     #filename = 'StudentGrade.sav'
 
-    joblib_LR_model = joblib.load(filename, encoding= 'unicode_escape')
+    joblib_LR_model = joblib.load(filename)
 
     test_data = [[studytime, failures, freetime, absences, health, grade_1, grade_2]]
 
