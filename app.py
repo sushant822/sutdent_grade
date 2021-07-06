@@ -55,11 +55,11 @@ def getvalues():
     filename = open(os.path.join(__location__, 'StudentGrade.sav'))
     #filename = 'StudentGrade.sav'
 
-    joblib_LR_model = joblib.load(filename)
+    joblib_model = joblib.load(filename)
 
     test_data = [[studytime, failures, freetime, absences, health, grade_1, grade_2]]
 
-    Ypredict_full = joblib_LR_model.predict(test_data)
+    Ypredict_full = joblib_model.predict(test_data)
     Ypredict = np.round_(Ypredict_full, 2)
 
     return render_template("houseprice.html", Ypredict=[Ypredict])
