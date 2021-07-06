@@ -33,29 +33,26 @@ def house_price():
 
 @app.route("/houseprice",methods=['POST'])
 def getvalues():
-    studytime_1 = request.form['studytime']
-    failures_1 = request.form['failures']
-    freetime_1 = request.form['freetime']
-    absences_1 = request.form['absences']
-    health_1 = request.form['health']
-    grade_1_1 = request.form['grade_1']
-    grade_2_1 = request.form['grade_2']
+    studytime = request.form['studytime']
+    failures = request.form['failures']
+    freetime = request.form['freetime']
+    absences = request.form['absences']
+    health = request.form['health']
+    grade_1 = request.form['grade_1']
+    grade_2 = request.form['grade_2']
 
     ###### Convert to numeric ######
-    studytime = int(studytime_1)
-    failures = int(failures_1)
-    freetime = int(freetime_1)
-    absences = int(absences_1)
-    health = int(health_1)
-    grade_1 = int(grade_1_1)
-    grade_2 = int(grade_2_1)
+    studytime = int(studytime)
+    failures = int(failures)
+    freetime = int(freetime)
+    absences = int(absences)
+    health = int(health)
+    grade_1 = int(grade_1)
+    grade_2 = int(grade_2)
 
     ###### ML Model ######
-
     __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
-
     filename = open(os.path.join(__location__, 'LogisticRegression.sav'))
-
     #filename = 'StudentGrade.sav'
 
     joblib_LR_model = joblib.load(filename)
