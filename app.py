@@ -11,6 +11,7 @@ from bs4 import BeautifulSoup
 import time
 from math import sin, cos, sqrt, atan2, radians
 import re
+import os
 #from tensorflow import keras
 
 app = Flask(__name__)
@@ -50,7 +51,11 @@ def getvalues():
     grade_2 = int(grade_2)
 
     ###### ML Model ######
-    filename = 'StudentGrade.sav'
+
+    cwd = os.getcwd()  # Get the current working directory (cwd)
+    #files = os.listdir(cwd)  # Get all the files in that directory
+
+    filename = 'cwd/StudentGrade.sav'
 
     joblib_LR_model = joblib.load(filename)
 
