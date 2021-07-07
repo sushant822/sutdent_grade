@@ -57,7 +57,7 @@ def getvalues():
 
     joblib_model = joblib.load(filename)
 
-    test_data = [[studytime, failures, freetime, absences, health, grade_1, grade_2, 1]]
+    test_data = [[studytime, failures, freetime, absences, health, grade_1, grade_2]]
 
     Ypredict_full = joblib_model.predict(test_data)
     Ypredict = np.round_(Ypredict_full, 2)
