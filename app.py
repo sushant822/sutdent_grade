@@ -42,13 +42,13 @@ def getvalues():
     grade_2 = request.form['grade_2']
 
     ###### Convert to numeric ######
-    studytime = int(studytime)
-    failures = int(failures)
-    freetime = int(freetime)
-    absences = int(absences)
-    health = int(health)
-    grade_1 = int(grade_1)
-    grade_2 = int(grade_2)
+    #studytime = int(studytime)
+    #failures = int(failures)
+    #freetime = int(freetime)
+    #absences = int(absences)
+    #health = int(health)
+    #grade_1 = int(grade_1)
+    #grade_2 = int(grade_2)
 
     ###### ML Model ######
     __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
