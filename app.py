@@ -4,12 +4,12 @@ from flask import Flask, render_template, request, redirect
 from flask import request
 import joblib
 #import pgeocode
-import pandas as pd
+#import pandas as pd
 import numpy as np
 #import requests
 #from bs4 import BeautifulSoup
 #import time
-from math import sin, cos, sqrt, atan2, radians
+#from math import sin, cos, sqrt, atan2, radians
 #import re
 import os
 #from tensorflow import keras
