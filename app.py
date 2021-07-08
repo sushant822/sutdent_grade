@@ -25,25 +25,27 @@ def getvalues():
     grade_2 = request.form['grade_2']
 
     ###### Convert to numeric ######
-    studytime = int(studytime)
-    failures = int(failures)
-    freetime = int(freetime)
-    absences = int(absences)
-    health = int(health)
-    grade_1 = int(grade_1)
-    grade_2 = int(grade_2)
+    #studytime = int(studytime)
+    #failures = int(failures)
+    #freetime = int(freetime)
+    #absences = int(absences)
+    #health = int(health)
+    #grade_1 = int(grade_1)
+    #grade_2 = int(grade_2)
 
     ###### ML Model ######
-    __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
-    filename = open(os.path.join(__location__, 'StudentGrade.sav'), errors="ignore")
+    #__location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
+    #filename = open(os.path.join(__location__, 'StudentGrade.sav'), errors="ignore")
     #filename = 'StudentGrade.sav'
 
-    joblib_model = joblib.load(filename)
+    #joblib_model = joblib.load(filename)
 
-    test_data = [[studytime, failures, freetime, absences, health, grade_1, grade_2]]
+    #test_data = [[studytime, failures, freetime, absences, health, grade_1, grade_2]]
 
-    Ypredict_full = joblib_model.predict(test_data)
-    Ypredict = np.round_(Ypredict_full, 2)
+    #Ypredict_full = joblib_model.predict(test_data)
+    #Ypredict = np.round_(Ypredict_full, 2)
+
+    Ypredict = 10
 
     return render_template("houseprice.html", Ypredict=[Ypredict])
     ####### END #######
