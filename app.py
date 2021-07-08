@@ -47,7 +47,7 @@ def getvalues():
 
     Ypredict = 20
 
-    return render_template("index.html", Ypredict=[Ypredict])
+    return render_template("index.html", Ypredict_display=Ypredict)
     ####### END #######
 
 if __name__ == "__main__":
