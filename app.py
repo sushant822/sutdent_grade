@@ -35,7 +35,7 @@ def getvalues():
 
     ###### ML Model ######
     __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
-    filename = open(os.path.join(__location__, 'StudentGrade.sav'), errors="ignore")
+    filename = open(os.path.join(__location__, 'StudentGrade.pkl'), errors="ignore")
     #filename = 'StudentGrade.sav'
 
     joblib_model = joblib.load(filename)
