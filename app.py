@@ -44,7 +44,7 @@ def getvalues():
     with open(filename, 'rb') as file:  
         Pickled_LR_Model = pickle.load(file)
 
-    test_data = [[1,studytime, failures, freetime, absences, health, grade_1, grade_2]]
+    test_data = [[studytime, failures, freetime, absences, health, grade_1, grade_2]]
 
     #Ypredict = joblib_model.predict(test_data)
     Ypredict = Pickled_LR_Model.predict(test_data)
