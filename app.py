@@ -46,7 +46,9 @@ def getvalues():
     test_data = [[studytime, failures, freetime, absences, health, grade_1, grade_2]]
 
     #Ypredict_full = joblib_model.predict(test_data)
-    Ypredict = Pickled_LR_Model.predict(test_data)
+    #Ypredict = Pickled_LR_Model.predict(test_data)
+
+    Ypredict = 15
 
     #Ypredict = np.round_(Ypredict_full, 2)
 
