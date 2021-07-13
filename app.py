@@ -36,9 +36,9 @@ def getvalues():
     grade_2 = int(grade_2)
 
     ###### ML Model ######
-    __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
-    filename = open(os.path.join(__location__, 'StudentGrade.pkl'), errors="ignore")
-    #filename = 'StudentGrade.sav'
+    #__location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
+    #filename = open(os.path.join(__location__, 'StudentGrade.pkl'), errors="ignore")
+    filename = 'data/StudentGrade.sav'
 
     joblib_model = joblib.load(filename)
     #with open(filename, 'rb') as file:  
@@ -55,7 +55,7 @@ def getvalues():
 
     #Ypredict = 20
 
-    return render_template("index.html", Ypredict_display=Ypredict)
+    return render_template("index.html", Ypredict_display=[Ypredict])
     ####### END #######
 
 if __name__ == "__main__":
