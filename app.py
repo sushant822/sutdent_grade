@@ -35,13 +35,13 @@ def getvalues():
     grade_2 = int(grade_2)
 
     ###### ML Model ######
-    __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
-    filename = open(os.path.join(__location__, 'StudentGrade.pkl'), errors="ignore")
+    #__location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
+    #filename = open(os.path.join(__location__, 'StudentGrade.pkl'), errors="ignore")
     #filename = 'StudentGrade.sav'
 
     #joblib_model = joblib.load(filename)
-    with open(filename, 'rb') as file:  
-        Pickled_LR_Model = pickle.load(file)
+    #with open(filename, 'rb') as file:  
+    #    Pickled_LR_Model = pickle.load(file)
 
     test_data = [[studytime, failures, freetime, absences, health, grade_1, grade_2]]
 
