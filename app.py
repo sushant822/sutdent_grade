@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from flask import request
 from sklearn.linear_model import LogisticRegression
 import joblib
+from joblib import load
 import pandas as pd
 import numpy as np
 import os
@@ -40,7 +41,7 @@ def getvalues():
     filename = open(os.path.join(__location__, 'StudentGrade.pkl'), errors="ignore")
     #filename = 'data/StudentGrade.sav'
 
-    joblib_model = joblib.load(filename)
+    joblib_model = load(filename)
     #with open(filename, 'rb') as file:  
     #    Pickled_LR_Model = pickle.load(file)
 
