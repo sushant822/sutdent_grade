@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, request
 from flask import request
 from sklearn.linear_model import LogisticRegression
 import joblib
@@ -12,25 +12,21 @@ app = Flask(__name__)
 
 #db = SQLAlchemy()
 
-@app.route("/index")
-def index():
+@app.route("/")
+def home():
     
     return render_template("index.html")
 
-@app.route("/predict")
-def predict():
-    
-    return render_template("predict.html")
 
-@app.route("/predict",methods=['POST'])
+@app.route("/index",methods=['POST'])
 def getvalues():
-    studytime = request.form['studytime']
-    failures = request.form['failures']
-    freetime = request.form['freetime']
-    absences = request.form['absences']
-    health = request.form['health']
-    grade_1 = request.form['grade_1']
-    grade_2 = request.form['grade_2']
+    studytime = request.form.get['studytime']
+    failures = request.form.get['failures']
+    freetime = request.form.get['freetime']
+    absences = request.form.get['absences']
+    health = request.form.get['health']
+    grade_1 = request.form.get['grade_1']
+    grade_2 = request.form.get['grade_2']
 
     ###### Convert to numeric ######
     studytime = float(studytime)
@@ -46,13 +42,13 @@ def getvalues():
     filename = open(os.path.join(__location__, 'StudentGrade.pkl'), errors="ignore")
     #filename = 'data/StudentGrade.sav'
 
-    model = load(filename)
+    joblib_LR_model = joblib.load(filename)
     #with open(filename, 'rb') as file:  
     #    Pickled_LR_Model = pickle.load(file)
 
     test_data = [[studytime, failures, freetime, absences, health, grade_1, grade_2]]
 
-    Ypredict = model.predict(test_data)
+    Ypredict = joblib_LR_model.predict(test_data)
     #Ypredict = Pickled_LR_Model.predict(test_data)
 
     #Ypredict = 15
@@ -61,7 +57,7 @@ def getvalues():
 
     #Ypredict = 20
 
-    return render_template("predict.html", Ypredict_display=Ypredict)
+    return render_template("index.html", Ypredict_display=Ypredict)
     ####### END #######
 
 if __name__ == "__main__":
