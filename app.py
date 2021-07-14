@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for
 from flask import request
 from sklearn.linear_model import LogisticRegression
 import joblib
@@ -56,7 +56,7 @@ def getvalues():
 
     #Ypredict = 20
 
-    return render_template("index.html", Ypredict_display=[Ypredict])
+    return redirect(url_for("index.html", Ypredict_display=[Ypredict]))
     ####### END #######
 
 if __name__ == "__main__":
