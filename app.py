@@ -61,7 +61,7 @@ def getvalues():
 
     #Ypredict = 20
 
-    return redirect(url_for("/predict.html", Ypredict_display=Ypredict))
+    return render_template("predict.html", Ypredict_display=Ypredict)
     ####### END #######
 
 if __name__ == "__main__":
