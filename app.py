@@ -17,6 +17,11 @@ def home():
     
     return render_template("index.html")
 
+@app.route("/predict")
+def predict():
+    
+    return render_template("predict.html")
+
 @app.route("/predict",methods=['POST'])
 def getvalues():
     studytime = request.form['studytime']
