@@ -17,7 +17,7 @@ def home():
     
     return render_template("index.html")
 
-@app.route("/",methods=['POST'])
+@app.route("/predict",methods=['POST'])
 def getvalues():
     studytime = request.form['studytime']
     failures = request.form['failures']
@@ -56,7 +56,7 @@ def getvalues():
 
     #Ypredict = 20
 
-    return render_template("/", Ypredict_display=Ypredict)
+    return render_template("/predict", Ypredict_display=Ypredict)
     ####### END #######
 
 if __name__ == "__main__":
