@@ -29,38 +29,47 @@ def getvalues():
     grade_2 = request.form['grade_2']
 
     ###### Convert to numeric ######
-    studytime = float(studytime)
-    failures = float(failures)
-    freetime = float(freetime)
-    absences = float(absences)
-    health = float(health)
-    grade_1 = float(grade_1)
-    grade_2 = float(grade_2)
+    studytime = int(studytime)
+    failures = int(failures)
+    freetime = int(freetime)
+    absences = int(absences)
+    health = int(health)
+    grade_1 = int(grade_1)
+    grade_2 = int(grade_2)
 
     ###### ML Model ######
-    __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
-    filename = open(os.path.join(__location__, 'StudentGrade.pkl'), errors="ignore")
+    #__location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
+    #filename = open(os.path.join(__location__, 'StudentGrade.pkl'), errors="ignore")
     #filename = 'data/StudentGrade.sav'
 
-    joblib_LR_model = joblib.load(filename)
+    #joblib_LR_model = joblib.load(filename)
     #with open(filename, 'rb') as file:  
     #    Pickled_LR_Model = pickle.load(file)
 
     test_data = [[studytime, failures, freetime, absences, health, grade_1, grade_2]]
 
-    test_data = np.array(test_data)
+    #test_data = np.array(test_data)
     
     #reshape array
-    test_data = test_data.reshape(1,-1)
+    #test_data = test_data.reshape(1,-1)
 
-    Ypredict = joblib_LR_model.predict(test_data)
+    #Ypredict = joblib_LR_model.predict(test_data)
     #Ypredict = Pickled_LR_Model.predict(test_data)
 
     #Ypredict = 15
 
     #Ypredict = np.round_(Ypredict_full, 2)
 
-    #Ypredict = 20
+    #open file
+    file = open("StudentGrade.pkl","rb")
+    
+    #load trained model
+    trained_model = joblib.load(file)
+    
+    #predict
+    prediction = trained_model.predict(test_data)
+
+    Ypredict = prediction
 
     return render_template("index.html", Ypredict_display=Ypredict)
     ####### END #######
