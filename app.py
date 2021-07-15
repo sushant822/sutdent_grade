@@ -40,9 +40,9 @@ def getvalues():
     ###### ML Model ######
     #__location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
     #filename = open(os.path.join(__location__, 'StudentGrade.pkl'), errors="ignore")
-    #filename = 'data/StudentGrade.sav'
+    filename = '/Users/sdeshpande/Desktop/Sushant/Temp/Files/DS/GitHub Desktop/GitHub/sutdent_grade/StudentGrade.sav'
 
-    #joblib_LR_model = joblib.load(filename)
+    joblib_LR_model = joblib.load(filename)
     #with open(filename, 'rb') as file:  
     #    Pickled_LR_Model = pickle.load(file)
 
@@ -53,7 +53,7 @@ def getvalues():
     #reshape array
     #test_data = test_data.reshape(1,-1)
 
-    #Ypredict = joblib_LR_model.predict(test_data)
+    Ypredict = joblib_LR_model.predict(test_data)
     #Ypredict = Pickled_LR_Model.predict(test_data)
 
     #Ypredict = 15
@@ -61,15 +61,15 @@ def getvalues():
     #Ypredict = np.round_(Ypredict_full, 2)
 
     #open file
-    filename = open("/Users/sdeshpande/Desktop/Sushant/Temp/Files/DS/GitHub Desktop/GitHub/sutdent_grade/StudentGrade.pkl","rb")
+    #filename = open("/Users/sdeshpande/Desktop/Sushant/Temp/Files/DS/GitHub Desktop/GitHub/sutdent_grade/StudentGrade.pkl","rb")
     
     #load trained model
-    trained_model = joblib.load(filename)
+    #trained_model = joblib.load(filename)
     
     #predict
-    prediction = trained_model.predict(test_data)
+    #prediction = trained_model.predict(test_data)
 
-    Ypredict = prediction
+    #predict = prediction
 
     return render_template("index.html", Ypredict_display=Ypredict)
     ####### END #######
