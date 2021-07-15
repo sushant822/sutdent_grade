@@ -61,10 +61,10 @@ def getvalues():
     #Ypredict = np.round_(Ypredict_full, 2)
 
     #open file
-    file = open("/Users/sdeshpande/Desktop/Sushant/Temp/Files/DS/GitHub Desktop/GitHub/sutdent_grade/StudentGrade.pkl","rb")
+    filename = open("/Users/sdeshpande/Desktop/Sushant/Temp/Files/DS/GitHub Desktop/GitHub/sutdent_grade/StudentGrade.pkl","rb")
     
     #load trained model
-    trained_model = joblib.load(file)
+    trained_model = joblib.load(filename)
     
     #predict
     prediction = trained_model.predict(test_data)
