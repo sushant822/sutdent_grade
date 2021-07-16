@@ -1,12 +1,12 @@
 from flask import Flask, render_template, redirect, url_for
 from flask import request
-from sklearn.linear_model import LogisticRegression
+#from sklearn.linear_model import LogisticRegression
 import joblib
 from joblib import load
 import pandas as pd
 import numpy as np
-import os
-import pickle
+#import os
+#import pickle
 
 app = Flask(__name__)
 
