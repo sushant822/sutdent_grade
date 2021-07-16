@@ -40,7 +40,7 @@ def getvalues():
     ###### ML Model ######
     #__location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
     #filename = open(os.path.join(__location__, 'StudentGrade.pkl'), errors="ignore")
-    filename = '/Users/sdeshpande/Desktop/Sushant/Temp/Files/DS/GitHub Desktop/GitHub/sutdent_grade/StudentGrade.sav'
+    filename = 'https://github.com/sushant822/sutdent_grade/blob/main/StudentGrade.sav'
 
     joblib_LR_model = joblib.load(filename)
     #with open(filename, 'rb') as file:  
