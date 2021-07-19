@@ -58,8 +58,8 @@ def getvalues():
 
     #Ypredict = 15
 
-    Ypredict_r = np.round_(Ypredict_full, 2)
-    Ypredict = Ypredict_r[0]
+    Ypredict = np.round_(Ypredict_full[0], 2)
+    #Ypredict = Ypredict_r[0]
 
     #open file
     #filename = open("/Users/sdeshpande/Desktop/Sushant/Temp/Files/DS/GitHub Desktop/GitHub/sutdent_grade/StudentGrade.pkl","rb")
